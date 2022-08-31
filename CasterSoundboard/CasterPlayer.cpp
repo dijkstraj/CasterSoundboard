@@ -58,8 +58,8 @@ CasterPlayerWidget::CasterPlayerWidget(QWidget* parent) : QWidget(parent)
     // UI Settings
     this->setMinimumWidth(200);
     this->setMinimumHeight(200);
-    this->setMaximumWidth(200);
-    this->setMaximumHeight(200);
+    this->setMaximumWidth(400);
+    this->setMaximumHeight(400);
 
     //Set Widget Defaults
     this->setAcceptDrops(true);
@@ -141,7 +141,7 @@ CasterPlayerWidget::CasterPlayerWidget(QWidget* parent) : QWidget(parent)
     volumeSlider = new QSlider(Qt::Vertical);
     volumeSlider->setValue(100);
     volumeSlider->setStyleSheet("QSlider:vertical {"
-                                "min-width: 30px;"
+                                "min-width: 70px;"
                                 "background-color:transparent;"
                                 "}"
                                 "QSlider::groove:vertical { "

@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     //SET MAIN WINDOW SIZE
     w->resize(1000, 500);
     //SHOW MAIN WINDOW
-    w->show();
+    w->showFullScreen();
     //END APPLICATION
     return a.exec();
 }

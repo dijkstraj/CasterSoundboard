@@ -56,18 +56,14 @@ CasterBoard::CasterBoard(QWidget* parent) : QWidget(parent)
     // int_to_player_key
     int_to_player_key = new QMap<int,QString>
     {
-        {0, "1"},{1,"2"},{2,"3"},{3,"4"},{4,"5"},{5,"6"},{6,"7"},{7,"8"},
-        {8, "Q"},{9,"W"},{10,"E"},{11,"R"},{12,"T"},{13,"Y"},{14,"U"},{15,"I"},
-        {16,"A"},{17,"S"},{18,"D"},{19,"F"},{20,"G"},{21,"H"},{22,"J"},{23,"K"},
-        {24,"Z"},{25,"X"},{26,"C"},{27,"V"},{28,"B"},{29,"N"},{30,"M"},{31,","}
+        {0,"Q"},{1,"W"},{2,"E"},{3,"R"},
+        {4,"A"},{5,"S"},{6,"D"},{7,"F"}
     };
     // keyboard_key_to_player_key
     keyboard_key_to_player_key = new QMap<int,QString>
     {
-        {Qt::Key_1,"1"},{Qt::Key_2,"2"},{Qt::Key_3,"3"},{Qt::Key_4,"4"},{Qt::Key_5,"5"},{Qt::Key_6,"6"},{Qt::Key_7,"7"},{Qt::Key_8,"8"},
-        {Qt::Key_Q, "Q"},{Qt::Key_W,"W"},{Qt::Key_E,"E"},{Qt::Key_R,"R"},{Qt::Key_T,"T"},{Qt::Key_Y,"Y"},{Qt::Key_U,"U"},{Qt::Key_I,"I"},
-        {Qt::Key_A,"A"},{Qt::Key_S,"S"},{Qt::Key_D,"D"},{Qt::Key_F,"F"},{Qt::Key_G,"G"},{Qt::Key_H,"H"},{Qt::Key_J,"J"},{Qt::Key_K,"K"},
-        {Qt::Key_Z,"Z"},{Qt::Key_X,"X"},{Qt::Key_C,"C"},{Qt::Key_V,"V"},{Qt::Key_B,"B"},{Qt::Key_N,"N"},{Qt::Key_M,"M"},{Qt::Key_Comma,","}
+        {Qt::Key_Q,"Q"},{Qt::Key_W,"W"},{Qt::Key_E,"E"},{Qt::Key_R,"R"},
+        {Qt::Key_A,"A"},{Qt::Key_S,"S"},{Qt::Key_D,"D"},{Qt::Key_F,"F"}
     };
     // players
     players = new QMap<QString, CasterPlayerWidget*>();
@@ -87,7 +83,7 @@ CasterBoard::CasterBoard(QWidget* parent) : QWidget(parent)
 
         // Update Next Layout
         _board_column += 1;
-        if(_board_column > 7){
+        if(_board_column >= 4){
             _board_row += 1;
             _board_column = 0;
         }
